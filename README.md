@@ -1,14 +1,14 @@
 <div align="center">
 
 <!-- LOGO PLACEHOLDER -->
-<!-- İstersen buraya MTIVE / Paranoia OS logosu ekleriz -->
+<!-- You may place the MTIVE / Paranoia OS logo here -->
 <!-- <img src="YOUR_LOGO_URL" width="120" alt="Paranoia OS Logo" /> -->
 
 <h1 style="margin-bottom:6px; letter-spacing: 2px;">PARANOIA OS</h1>
 
 <p style="max-width: 820px; margin: 0 auto; opacity: 0.9;">
-<b>MTIVE Solutions</b> tarafından geliştirilen <b>taktik canlı (live) güvenlik dağıtımı</b>.<br/>
-Kurulum yok. İz bırakma minimal. Hızlı açılış. Saha kullanımı odaklı.
+A <b>high-assurance tactical live security operating system</b> engineered by <b>MTIVE Solutions</b>.<br/>
+Zero installation. Minimal footprint. Rapid deployment. Built for real-world operations.
 </p>
 
 <br/>
@@ -27,10 +27,10 @@ Kurulum yok. İz bırakma minimal. Hızlı açılış. Saha kullanımı odaklı.
 <div style="border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 18px 18px; max-width: 920px; text-align: left; background: rgba(255,255,255,0.03);">
   <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
     <div style="flex: 1 1 520px;">
-      <h3 style="margin: 0 0 8px 0;">Operational Security, Simplified.</h3>
+      <h3 style="margin: 0 0 8px 0;">Operational Security, Refined.</h3>
       <p style="margin:0; opacity:0.9;">
-        Paranoia OS, güvenli ve taşınabilir bir çalışma ortamını, minimum sürtünmeyle sunmak için tasarlanmıştır.
-        Amaç: <b>hızlı açıl, işini yap, çık</b>. 
+        Paranoia OS delivers a hardened, portable operational environment designed for speed, discretion, and control.
+        Its philosophy is simple: <b>deploy fast, execute clean, leave nothing behind</b>.
       </p>
     </div>
     <div style="flex: 0 0 auto; text-align:right;">
@@ -51,82 +51,82 @@ Kurulum yok. İz bırakma minimal. Hızlı açılış. Saha kullanımı odaklı.
 
 <hr/>
 
-<h2>✨ Özellikler</h2>
+<h2>✨ Key Features</h2>
 
 <ul>
-  <li><b>Live kullanım</b> — kurulum yok, direkt USB/ISO ile çalışma</li>
-  <li><b>Reproducible build</b> — aynı kaynakla yeniden üretilebilir çıktı hedefi</li>
-  <li><b>Tor autostart</b> — anonimliğe hızlı giriş (yapılandırılabilir)</li>
-  <li><b>MAC randomization</b> — ağ kimliği izini azaltma (opsiyonel / manuel+otomatik)</li>
-  <li><b>Panic wipe</b> — hızlı iz temizleme + kapanış (operasyon modu)</li>
-  <li><b>Dashboard komutu</b> — tek komutla menü</li>
+  <li><b>True live operation</b> — no installation, no persistence, runs directly from USB or ISO</li>
+  <li><b>Reproducible builds</b> — deterministic outputs, verifiable integrity</li>
+  <li><b>Tor auto-initialization</b> — rapid anonymity onboarding (fully configurable)</li>
+  <li><b>MAC address randomization</b> — reduced network-level traceability (manual & automatic modes)</li>
+  <li><b>Panic wipe mechanism</b> — immediate trace destruction and controlled shutdown</li>
+  <li><b>Unified dashboard command</b> — centralized control through a single entry point</li>
 </ul>
 
 <hr/>
 
-<h2>🧱 Proje Yapısı</h2>
+<h2>🧱 Project Architecture</h2>
 
 <table>
   <tr>
     <td><code>config/</code></td>
-    <td>Live-build yapılandırmaları (paket listeleri, hook’lar, sistem dosyaları)</td>
+    <td>Live-build configurations (package manifests, hooks, system policies)</td>
   </tr>
   <tr>
     <td><code>scripts/build.sh</code></td>
-    <td>ISO üretim script’i</td>
+    <td>Automated ISO build pipeline</td>
   </tr>
   <tr>
     <td><code>config/includes.chroot/</code></td>
-    <td>ISO içine kopyalanacak dosyalar (motd, servisler, komutlar)</td>
+    <td>Assets injected into the live environment (motd, services, operational commands)</td>
   </tr>
 </table>
 
 <hr/>
 
-<h2>⚙️ Build</h2>
+<h2>⚙️ Build Process</h2>
 
 <pre><code>sudo apt install live-build
 sudo ./scripts/build.sh</code></pre>
 
-<p>Çıktı ISO dosyası proje dizininde oluşur (ör: <code>live-image-amd64.hybrid.iso</code>).</p>
+<p>The resulting ISO image is generated in the project root directory (e.g. <code>live-image-amd64.hybrid.iso</code>).</p>
 
 <hr/>
 
-<h2>🧨 Komutlar</h2>
+<h2>🧨 Operational Commands</h2>
 
 <table>
   <tr>
-    <th align="left">Komut</th>
-    <th align="left">Açıklama</th>
+    <th align="left">Command</th>
+    <th align="left">Function</th>
   </tr>
   <tr>
     <td><code>paranoia</code></td>
-    <td>Dashboard / hızlı menü</td>
+    <td>Operational dashboard and quick-access control panel</td>
   </tr>
   <tr>
     <td><code>panic</code></td>
-    <td>Hızlı iz temizleme + shutdown (operasyon modu)</td>
+    <td>Immediate trace wipe and system shutdown (emergency operation mode)</td>
   </tr>
 </table>
 
 <hr/>
 
-<h2>🔒 Güvenlik Notu</h2>
+<h2>🔒 Security Notice</h2>
 
 <ul>
-  <li>Bu proje <b>yalnızca izinli sistemlerde</b> test/operasyon amaçlı kullanılmalıdır.</li>
-  <li>Anonimlik bir “aç/kapa” anahtarı değildir: ağ modeli, DNS, tarayıcı davranışı, fiziksel OPSEC gibi faktörler önemlidir.</li>
+  <li>This project is intended for use <b>only on systems you are explicitly authorized to access</b>.</li>
+  <li>Anonymity is not binary: network topology, DNS behavior, browser usage, and physical OPSEC are all critical factors.</li>
 </ul>
 
 <hr/>
 
-<h2>🏷️ Kimlik</h2>
+<h2>🏷️ Identity</h2>
 
 <p>
-<b>Paranoia OS</b>, <b>MTIVE Solutions</b> ürünüdür.
+<b>Paranoia OS</b> is a security-focused operating system developed by <b>MTIVE Solutions</b>.
 </p>
 
 <hr/>
 
-<h2>📄 Lisans</h2>
+<h2>📄 License</h2>
 <p>MIT</p>
