@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "[!] PANIC MODE ACTIVATED"
+
+# history
+history -c
+rm -f ~/.bash_history
+
+# logs
+rm -rf /var/log/*
+
+# tmp
+rm -rf /tmp/*
+rm -rf /var/tmp/*
+
+# swap off
+swapoff -a 2>/dev/null
+
+sync
+
+echo "[!] System shutting down..."
+sleep 2
+poweroff -f
