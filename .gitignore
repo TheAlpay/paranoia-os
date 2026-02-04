@@ -1,0 +1,19 @@
+# build artifacts
+.build/
+binary/
+build/
+cache/
+chroot/
+
+# outputs
+*.iso
+live-image-*.contents
+live-image-*.files
+live-image-*.packages
+live-image-*.hybrid.iso
+
+# metadata
+binary.modified_timestamps
+chroot.files
+chroot.packages.*
+
