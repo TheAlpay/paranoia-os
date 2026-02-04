@@ -1,0 +1,11 @@
+#!/bin/bash
+
+IFACE=$(ip -o link show | awk -F': ' '{print $2}' | grep -E 'wl|wlan' | head -n1)
+
+if [ ! -z "$IFACE" ]; then
+    ip link set $IFACE down
+    macchanger -r $IFACE
+    ip link set $IFACE up
+fi
+
+service tor start

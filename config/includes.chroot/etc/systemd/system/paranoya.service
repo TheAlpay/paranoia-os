@@ -1,0 +1,10 @@
+[Unit]
+Description=Paranoya Boot Init
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/paranoya-init
+
+[Install]
+WantedBy=multi-user.target
