@@ -1,0 +1,60 @@
+#!/bin/bash
+
+set -e
+
+clear
+echo "=============================="
+echo "        PARANOYA  OS"
+echo "=============================="
+echo "1) Quick LAN scan (192.168.1.0/24)"
+echo "2) Tor status / start"
+echo "3) Randomize Wi-Fi MAC (manual)"
+echo "4) Panic wipe + poweroff"
+echo "5) Show installed tools"
+echo "0) Exit"
+echo "------------------------------"
+read -p "Select: " c
+
+case "$c" in
+  1)
+    sudo nmap -sn 192.168.1.0/24
+    ;;
+  2)
+    sudo service tor status || true
+    echo "Starting Tor..."
+    sudo service tor start || true
+    sudo service tor status || true
+    ;;
+  3)
+    IFACE=$(ip -o link show | awk -F': ' '{print $2}' | grep -E 'wl|wlan' | head -n1)
+    if [ -z "$IFACE" ]; then
+      echo "No Wi-Fi interface found."
+      exit 0
+    fi
+    echo "Using interface: $IFACE"
+    sudo ip link set "$IFACE" down
+    sudo macchanger -r "$IFACE"
+    sudo ip link set "$IFACE" up
+    ;;
+  4)
+    sudo /usr/local/bin/panic
+    ;;
+  5)
+    echo "Core tools:"
+    echo "- nmap"
+    echo "- wireshark"
+    echo "- tor"
+    echo "- macchanger"
+    echo "- aircrack-ng"
+    echo "- curl / git"
+    ;;
+  0)
+    exit 0
+    ;;
+  *)
+    echo "Invalid."
+    ;;
+esac
+
+echo
+read -p "Press Enter to return..." _
