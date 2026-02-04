@@ -1,132 +1,130 @@
 <div align="center">
 
-<!-- LOGO PLACEHOLDER -->
-<!-- You may place the MTIVE / Paranoia OS logo here -->
-<!-- <img src="YOUR_LOGO_URL" width="120" alt="Paranoia OS Logo" /> -->
+<h1>PARANOIA OS</h1>
 
-<h1 style="margin-bottom:6px; letter-spacing: 2px;">PARANOIA OS</h1>
+<b>Tactical • Portable • Silent</b>  
+<b>Powered by MTIVE Solutions</b>
 
-<p style="max-width: 820px; margin: 0 auto; opacity: 0.9;">
-A <b>high-assurance tactical live security operating system</b> engineered by <b>MTIVE Solutions</b>.<br/>
-Zero installation. Minimal footprint. Rapid deployment. Built for real-world operations.
-</p>
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=20&duration=2200&color=00FF88&center=true&vCenter=true&width=700&lines=Live+USB+Security+System;Boot+%3E+Operate+%3E+Disappear;No+Install+No+Trace+No+Bloat;Built+for+Real+World+Operations" />
 
-<br/>
+<br/><br/>
 
-<!-- BADGES -->
-<p>
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-0b0f19?style=for-the-badge">
-  <img alt="Build" src="https://img.shields.io/badge/Build-Reproducible-0b0f19?style=for-the-badge">
-  <img alt="OS" src="https://img.shields.io/badge/Base-Debian-0b0f19?style=for-the-badge">
-  <img alt="MTIVE" src="https://img.shields.io/badge/Powered%20by-MTIVE%20Solutions-0b0f19?style=for-the-badge">
-</p>
-
-<br/>
-
-<!-- HERO PANEL -->
-<div style="border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 18px 18px; max-width: 920px; text-align: left; background: rgba(255,255,255,0.03);">
-  <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-    <div style="flex: 1 1 520px;">
-      <h3 style="margin: 0 0 8px 0;">Operational Security, Refined.</h3>
-      <p style="margin:0; opacity:0.9;">
-        Paranoia OS delivers a hardened, portable operational environment designed for speed, discretion, and control.
-        Its philosophy is simple: <b>deploy fast, execute clean, leave nothing behind</b>.
-      </p>
-    </div>
-    <div style="flex: 0 0 auto; text-align:right;">
-      <code style="display:inline-block; padding:10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(0,0,0,0.25);">
-        paranoia
-      </code>
-      <div style="height:8px;"></div>
-      <code style="display:inline-block; padding:10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(0,0,0,0.25);">
-        panic
-      </code>
-    </div>
-  </div>
-</div>
-
-<br/>
+<img src="https://img.shields.io/badge/STATUS-OPERATIONAL-0b0f19?style=for-the-badge&color=00aa66"/>
+<img src="https://img.shields.io/badge/BASE-Debian-0b0f19?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/LICENSE-MIT-0b0f19?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/POWERED%20BY-MTIVE-0b0f19?style=for-the-badge&color=222222"/>
 
 </div>
 
-<hr/>
+---
 
-<h2>✨ Key Features</h2>
+# 🎯 Mission
 
-<ul>
-  <li><b>True live operation</b> — no installation, no persistence, runs directly from USB or ISO</li>
-  <li><b>Reproducible builds</b> — deterministic outputs, verifiable integrity</li>
-  <li><b>Tor auto-initialization</b> — rapid anonymity onboarding (fully configurable)</li>
-  <li><b>MAC address randomization</b> — reduced network-level traceability (manual & automatic modes)</li>
-  <li><b>Panic wipe mechanism</b> — immediate trace destruction and controlled shutdown</li>
-  <li><b>Unified dashboard command</b> — centralized control through a single entry point</li>
-</ul>
+**Paranoia OS** is a lightweight tactical live Linux distribution developed by **MTIVE Solutions**.
 
-<hr/>
+Designed for:
 
-<h2>🧱 Project Architecture</h2>
+- Red Team operations  
+- Field cybersecurity work  
+- Portable forensic usage  
+- Anonymous sessions  
+- Emergency security toolkit  
 
-<table>
-  <tr>
-    <td><code>config/</code></td>
-    <td>Live-build configurations (package manifests, hooks, system policies)</td>
-  </tr>
-  <tr>
-    <td><code>scripts/build.sh</code></td>
-    <td>Automated ISO build pipeline</td>
-  </tr>
-  <tr>
-    <td><code>config/includes.chroot/</code></td>
-    <td>Assets injected into the live environment (motd, services, operational commands)</td>
-  </tr>
-</table>
+No installation.  
+No footprint.  
+No nonsense.
 
-<hr/>
+Plug → Boot → Operate → Leave.
 
-<h2>⚙️ Build Process</h2>
+---
 
-<pre><code>sudo apt install live-build
-sudo ./scripts/build.sh</code></pre>
+# ⚙️ Quick Start (For Everyone)
 
-<p>The resulting ISO image is generated in the project root directory (e.g. <code>live-image-amd64.hybrid.iso</code>).</p>
+### 1 — Build ISO
+```bash
+sudo apt install live-build
+sudo ./scripts/build.sh
+```
 
-<hr/>
+### 2 — Flash to USB
+```bash
+sudo dd if=live-image-amd64.hybrid.iso of=/dev/sdX bs=4M status=progress && sync
+```
 
-<h2>🧨 Operational Commands</h2>
+### 3 — Boot
+Restart → Select USB → Done.
 
-<table>
-  <tr>
-    <th align="left">Command</th>
-    <th align="left">Function</th>
-  </tr>
-  <tr>
-    <td><code>paranoia</code></td>
-    <td>Operational dashboard and quick-access control panel</td>
-  </tr>
-  <tr>
-    <td><code>panic</code></td>
-    <td>Immediate trace wipe and system shutdown (emergency operation mode)</td>
-  </tr>
-</table>
+System runs fully from RAM.
 
-<hr/>
+Your disk stays untouched.
 
-<h2>🔒 Security Notice</h2>
+---
 
-<ul>
-  <li>This project is intended for use <b>only on systems you are explicitly authorized to access</b>.</li>
-  <li>Anonymity is not binary: network topology, DNS behavior, browser usage, and physical OPSEC are all critical factors.</li>
-</ul>
+# 🧨 Core Commands
 
-<hr/>
+```bash
+paranoia   # dashboard / quick tools
+panic      # wipe traces + shutdown
+```
 
-<h2>🏷️ Identity</h2>
+---
 
-<p>
-<b>Paranoia OS</b> is a security-focused operating system developed by <b>MTIVE Solutions</b>.
-</p>
+# 🔐 Capabilities
 
-<hr/>
+- Live RAM-only operation
+- Fast boot
+- Minimal attack surface
+- MAC randomization support
+- Tor ready
+- Panic wipe
+- Reproducible builds
+- No heavy GUI
+- No telemetry
+- No background junk
 
-<h2>📄 License</h2>
-<p>MIT</p>
+---
+
+# 🧠 Philosophy
+
+> If it is not required, it does not exist.
+
+Paranoia OS removes everything unnecessary.
+
+Only tools.  
+Only control.  
+Only purpose.
+
+---
+
+# 🧬 Reproducible Build
+
+Anyone can rebuild the same ISO from source.
+
+```bash
+git clone <repo>
+sudo ./scripts/build.sh
+```
+
+Same source → same result.
+
+Transparent. Auditable. Trustworthy.
+
+---
+
+# 🏢 Identity
+
+**Paranoia OS is an official MTIVE Solutions product.**
+
+Engineered as a professional tactical security tool.  
+Not a hobby distro.  
+Not a bloated desktop.
+
+Mission focused.
+
+---
+
+<div align="center">
+
+### Stay light. Stay silent. Stay paranoid.
+
+</div>
